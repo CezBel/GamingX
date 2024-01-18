@@ -13,26 +13,39 @@ const storage = multer.diskStorage({
   }
 });
 
-function checkFileType(file, callBack) {
-  const fileTypes = /jpg|jpeg|png/;
+function fileFilter(req, file, callBack) {
+  const fileTypes = /jpe?g|webp|png/;
+  const mimeTypes = /image\/jpe?g|image\/png|image\/webp/;
+
   const extname = fileTypes.test(path.extname(file.originalname).toLowerCase());
-  const mimeType = fileTypes.test(file.mimetype);
+  const mimeType = mimeTypes.test(file.mimetype);
 
   if (extname && mimeType) {
     callBack(null, true);
   } else {
-    callBack('Images only!');
+    callBack(new Error('Images only!'), false);
   }
 };
 
 const upload = multer({
   storage,
+  fileFilter
 });
 
-router.post('/', upload.single('image'), (req, res) => {
-  res.send({
-    message: 'Image Uploaded',
-    image: `/${req.file.path}`
+const uploadSingleImage = upload.single('image');
+
+router.post('/', (req, res) => {
+  uploadSingleImage(req, res, function (err) {
+    if (err) {
+      res.status(400).send({ message: err.message });
+    } else if (req.file?.path !== undefined) { 
+        res.status(200).send({
+        message: 'Image uploaded successfully',
+        image: `/${req.file?.path}` 
+      });
+    } else {
+      res.status(400).json({ message: 'You must choose file' });
+    }
   });
 });
 
