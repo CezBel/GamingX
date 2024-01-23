@@ -64,15 +64,3 @@ npm install
 
 # Run frontend (:3000) & backend (:5000)
 
-## Build & Deploy
-
-```
-# Create frontend prod build
-cd frontend
-npm run build
-```
-npm run dev
-
-# Run backend only
-npm run server
-```
