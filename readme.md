@@ -22,4 +22,4 @@
 
 ## Images and video
 
-<img width="600" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExY2NmZGd0Y2l4Y21oN2t4eGJuMGdxaHdvaXFld2Vwbjl4anRuMjh3YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/p5nhu0kuLZpDALB8WB/giphy.gif">
+<img width="1000" hight="1000" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExY2NmZGd0Y2l4Y21oN2t4eGJuMGdxaHdvaXFld2Vwbjl4anRuMjh3YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/p5nhu0kuLZpDALB8WB/giphy.gif">
