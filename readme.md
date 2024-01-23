@@ -20,7 +20,7 @@
 
 ## Features
 
-- Full featured shopping cart
+- Full-featured shopping cart
 - Product reviews and ratings
 - Top products carousel
 - Product pagination
@@ -41,7 +41,7 @@
 
 ### Env Variables
 
-Rename the `.env.example` file to `.env` and add the following
+Create `.env` and add the following
 
 ```
 NODE_ENV = development
