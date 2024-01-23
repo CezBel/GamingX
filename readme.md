@@ -22,4 +22,4 @@
 
 ## Images and video
 
-<img width="550" hight="550" src="https://www.veed.io/view/bb45e430-7c57-4d7c-a399-6f5138c66f1e">
+<img src="https://www.veed.io/view/bb45e430-7c57-4d7c-a399-6f5138c66f1e">
