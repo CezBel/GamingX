@@ -123,6 +123,7 @@ const ProductScreen = () => {
                   <ListGroup.Item>
                     <Button
                       className="btn-block"
+                      variant="warning"
                       type="button"
                       disabled={product.countInStock === 0}
                       onClick={addToCartHandler}
@@ -139,7 +140,7 @@ const ProductScreen = () => {
             <Col md={6}>
               <h2>Reviews</h2>
               {product.reviews.length === 0 && <Message>No Reviews</Message>}
-              <ListGroup>
+              <ListGroup className="my-2">
                 {product.reviews.map(review => (
                   <ListGroup.Item key={review._id}>
                     <strong>{review.name}</strong>
@@ -148,7 +149,10 @@ const ProductScreen = () => {
                     <p>{review.comment}</p>
                   </ListGroup.Item>
                 ))}
-                <ListGroup.Item>
+              </ListGroup>
+
+              <ListGroup>
+                <ListGroup.Item >
                   <h2>Write a Review</h2>
                   {loadingReview && <Loader />}
                   {userInfo ? (
@@ -181,7 +185,7 @@ const ProductScreen = () => {
                       <Button
                         disabled={loadingReview}
                         type="submit"
-                        variant="primary"
+                        variant="secondary"
                       >
                         Submit
                       </Button>

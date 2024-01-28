@@ -9,6 +9,10 @@ main {
   .rating svg {
     color: #f8e825;
   }
+
+  footer {
+    border-top: solid black 0.1px;
+  }
   
   .rating-text {
     font-size: 0.8rem;
@@ -38,10 +42,16 @@ main {
     background: #f4f4f4;
     padding: 10px;
     border: 1px solid #ddd;
+    border-radius: 5px;
   }
   
   .review button {
     margin-top: 10px;
+  }
+
+  .carousel { 
+    border-radius: 30px;
+    overflow: hidden;
   }
   
   .carousel-caption {
